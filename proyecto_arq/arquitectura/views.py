@@ -15,9 +15,7 @@ def inicio(request):
 def estudios(request):
     estudios = Estudios.objects.all()
     datos = {"datos" : estudios}
-    template = loader.get_template("index.html")
-    documento = template.render(datos)
-    return HttpResponse(documento)
+    return render (request , "index.html" , datos)
    
 
 
@@ -27,3 +25,15 @@ def alta_estudios(request):
     estudio.save()
     texto = f"Estudio = {estudio.nombre} Pais = {estudio.pais} Pagina Web = {estudio.pagina_web} Contacto = {estudio.email}"
     return HttpResponse(texto)
+
+
+def alta_obras_arq(request):
+    obra_arq = Obras(nombre_obra="Norwegian National Opera and Ballet" , arquitecto="Snohetta" , año_construccion="2008-05-05" , ubicacion="Oslo, Noruega")
+    obra_arq.save()
+    texto = f"Obra = {obra_arq.nombre_obra} Arquitecto = {obra_arq.arquitecto} , Año de construccion = {obra_arq.año_construccion} , Ubicacion = {obra_arq.ubicacion}"
+    return HttpResponse(texto)
+
+def obras_arq(request):
+    obras_arq = Obras.objects.all
+    datos = {"datos" : obras_arq}
+    return render (request , "index02.html" , datos)
