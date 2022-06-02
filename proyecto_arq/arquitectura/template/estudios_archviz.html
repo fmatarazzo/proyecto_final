@@ -1,0 +1,39 @@
+{% extends "index.html" %}
+
+{% load static %}
+
+{% block contenido %}
+
+  
+<main>
+
+
+    <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">id</th>
+            <th scope="col">Nombre</th>
+            <th scope="col">Pagina Web</th>
+            <th scope="col">Email</th>
+          </tr>
+        </thead>
+        <tbody>
+            {% for n in datos %}
+          <tr>
+            <th scope="row">{{n.id}}</th>
+            <td>{{n.nombre}}</td>
+            <td>{{n.pagina_web}}</td>
+            <td>{{n.email}}</td>
+          </tr>
+
+            {% endfor %}
+        </tbody>
+      </table>
+
+
+
+
+</main>
+
+
+{% endblock %}

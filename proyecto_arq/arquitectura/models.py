@@ -14,3 +14,8 @@ class Obras(models.Model):
     arquitecto = models.CharField(max_length=40)
     año_construccion = models.DateField()
     ubicacion = models.CharField(max_length=40)
+
+class Archviz(models.Model):
+    nombre = models.CharField(max_length=40)
+    pagina_web = models.URLField(max_length=40)
+    email = models.EmailField()

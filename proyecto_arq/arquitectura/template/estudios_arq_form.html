@@ -1,0 +1,40 @@
+{% extends "index.html" %}
+
+
+{% load static %}
+
+
+{% block contenido %}
+
+
+
+
+            <form action="alta_estudios" method="POST">
+
+                {% csrf_token %}
+            
+                <p>Nombre:</p>
+                <input type="text" name="nombre">
+                <p>Pais:</p>
+                <input type="text" name="pais">
+                <p>Pagina Web:</p>
+                <input type="url" name="pagina web">
+                <p>Email:</p>
+                <input type="email" name="email">
+            
+            
+                <input type="submit" value="Enviar">
+            
+            
+            </form>
+          
+
+
+
+
+
+
+
+
+
+{% endblock %}

@@ -1,0 +1,81 @@
+{% extends "index.html" %}
+
+{% load static %}
+
+{% block contenido %}
+
+  
+<main>
+
+    <div class="container">
+        <div class="row">
+            <div class="col">
+
+
+            </div>
+
+            <div class="col">
+
+
+            </div>
+
+            <div class="col">
+
+
+            </div>
+
+
+        </div>
+
+
+
+    </div>
+
+
+    <div class="card" style="width: 18rem;">
+        <img src="{% static 'arquitectura/assets/img/free-building-icon-1062-thumb.png' %}" class="card-img-top" alt="...">
+        <div class="card-body">
+            {% for n in datos %}
+          <h5 class="card-title">{{n.nombre_obra}}</h5>
+          <p class="card-text">{{n.arquitecto}}</p>
+          <a href="#" class="btn btn-primary">Ir a ficha</a>
+            {% endfor %}
+        </div>
+      </div>
+
+    <!--<table class="table">
+        <thead>
+          <tr>
+            <th scope="col">id</th>
+            <th scope="col">Obra</th>
+            <th scope="col">Arquitecto</th>
+            <th scope="col">Fecha de construccion</th>
+            <th scope="col">Ubicacion</th>
+          </tr>
+        </thead>
+        <tbody>
+            {% for n in datos %}
+          <tr>
+            <th scope="row">{{n.id}}</th>
+            <td>{{n.nombre_obra}}</td>
+            <td>{{n.arquitecto}}</td>
+            <td>{{n.año_construccion}}</td>
+            <td>{{n.ubicacion}}</td>
+          </tr>
+
+            {% endfor %}
+        </tbody>
+      </table> -->
+
+      
+
+      
+      
+
+
+
+
+</main>
+
+
+{% endblock %}
