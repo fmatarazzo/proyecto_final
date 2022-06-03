@@ -1,5 +1,7 @@
 # proyecto_final
 
+Hice todo en una sola app, llamada arquitectura.
+
 Puse 5 elementos=
 
 -ESTUDIOS ARQUITECTURA
