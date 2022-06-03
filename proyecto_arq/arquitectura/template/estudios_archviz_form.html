@@ -9,16 +9,14 @@
 
 
 
-            <form action="alta_estudios" method="POST">
+            <form action="alta_estudios_archviz" method="POST">
 
                 {% csrf_token %}
             
                 <p>Nombre:</p>
                 <input type="text" name="nombre" required>
-                <p>Pais:</p>
-                <input type="text" name="pais" required>
                 <p>Pagina Web:</p>
-                <input type="url" name="pagina web" required>
+                <input type="url" name="pagina_web" required>
                 <p>Email:</p>
                 <input type="email" name="email" required>
             

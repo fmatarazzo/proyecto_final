@@ -1,0 +1,27 @@
+{% extends "index.html" %}
+
+{% load static %}
+
+{% block contenido %}
+    
+<main>
+
+
+
+        <h2>Buscar nombre de estudios de arquitectura</h2>
+
+        <form action="resultado_busqueda" method="GET">
+      
+
+            <p>Escribi palabra clave</p>
+            <input type="text" name="nombre" id="nombre">
+            <input type="submit" value="Buscar">
+
+        </form>
+
+
+
+
+</main>
+
+{% endblock %}

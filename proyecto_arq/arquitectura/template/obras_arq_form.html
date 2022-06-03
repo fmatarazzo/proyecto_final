@@ -1,0 +1,40 @@
+{% extends "index.html" %}
+
+
+{% load static %}
+
+
+{% block contenido %}
+
+
+
+
+            <form action="alta_obras_arq" method="POST">
+
+                {% csrf_token %}
+            
+                <p>Nombre de la obra:</p>
+                <input type="text" name="nombre_obra" required>
+                <p>Arquitecto:</p>
+                <input type="text" name="arquitecto" required>
+                <p>Fecha construccion:</p>
+                <input type="date" name="año_construccion" required>
+                <p>Ubicacion:</p>
+                <input type="text" name="ubicacion" required>
+            
+            
+                <input type="submit" value="Enviar">
+            
+            
+            </form>
+          
+
+
+
+
+
+
+
+
+
+{% endblock %}

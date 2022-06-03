@@ -1,0 +1,20 @@
+
+
+    <form action="buscar_info"></form>
+
+    {% if estudios %}
+
+    <ul>
+        {% for n in estudios %}
+            <li>{{n.nombre}}</li>
+            <li>{{n.nombre}}</li>
+            {% endfor %}
+    </ul>
+
+    {% else %}
+        <p>No se encontraron estudios</p>
+    
+    {% endif %}
+
+    <a class="btn-primary" href="{% url 'index' %}">Volver</a>
+
