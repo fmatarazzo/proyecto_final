@@ -22,32 +22,66 @@
             <div class="container">
                 <a class="navbar-brand" href="{% url 'index' %}">Inicio</a>
 
-                <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+
+                <button class="btn btn-secondary dropdown-toggle" type="button" id="cta" data-bs-toggle="dropdown" aria-expanded="false">
                   Estudios Arquitectura
                 </button>
-                <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                <ul class="dropdown-menu" aria-labelledby="cta">
                   <li><a class="dropdown-item" href="{% url 'estudios_arquitectura' %}">Estudios</a></li>
+                  {% if request.user.is_authenticated %}
                   <li><a class="dropdown-item" href="{% url 'estudios_arq_form' %}">Agregar estudios</a></li>
+                  {% endif %}
                 </ul>
 
-                <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                <button class="btn btn-secondary dropdown-toggle" type="button" id="cta" data-bs-toggle="dropdown" aria-expanded="false">
                     Obras Arquitectura
                   </button>
-                  <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                  <ul class="dropdown-menu" aria-labelledby="cta">
                     <li><a class="dropdown-item" href="{% url 'obras_arquitectura' %}">Obras</a></li>
+                    {% if request.user.is_authenticated %}
                     <li><a class="dropdown-item" href="{% url 'obras_arq_form' %}">Agregar obras</a></li>
+                    {% endif %}
                   </ul>
 
-                  <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                  <button class="btn btn-secondary dropdown-toggle" type="button" id="cta" data-bs-toggle="dropdown" aria-expanded="false">
                     Estudios Archviz
                   </button>
-                  <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                  <ul class="dropdown-menu" aria-labelledby="cta">
                     <li><a class="dropdown-item" href="{% url 'estudios_archviz' %}">Estudios</a></li>
+                    {% if request.user.is_authenticated %}
                     <li><a class="dropdown-item" href="{% url 'estudios_archviz_form' %}">Agregar estudios</a></li>
+                    {% endif %}
                   </ul>
 
-                  <a class="btn btn-primary" href="{% url 'contacto' %}">Sign Up</a>
-                  <a class="btn btn-primary" href="{% url 'buscar_info' %}">Buscar</a>
+                  <a class="btn btn-secondary" href="{% url 'buscar_info' %}">Buscar</a>
+
+
+
+
+                  
+
+
+
+
+                  {% if not request.user.is_authenticated %}
+                  <a class="btn btn-primary" href="{% url 'login' %}">Sign Up</a>
+                  {% endif %}
+
+                  {% if request.user.is_authenticated %}
+                  <img src="{{ url }}" alt="">
+                  <p class="text-muted small mb-4">Bienvenido, {{user.username}} 
+                  <a href="{% url 'editar_perfil' %}" class="text-muted small mb-4">Editar perfil </a>
+                </p>
+
+                <a class="btn btn-primary" href="{% url 'logout' %}">Logout</a>
+
+                  {% endif %}
+
+
+                  <a class="btn btn-secondary" href="{% url 'about_me' %}">About me</a>
+
+
+
             </div>
 
 

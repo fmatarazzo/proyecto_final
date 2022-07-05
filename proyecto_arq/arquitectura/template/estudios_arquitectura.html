@@ -16,6 +16,7 @@
             <th scope="col">País</th>
             <th scope="col">Pagina Web</th>
             <th scope="col">Email</th>
+            <th scope="col">Opinion</th>
           </tr>
         </thead>
         <tbody>
@@ -26,6 +27,11 @@
             <td>{{n.pais}}</td>
             <td>{{n.pagina_web}}</td>
             <td>{{n.email}}</td>
+            <td>{{n.opinion}}</td>
+            {% if request.user.is_authenticated %}
+            <td><a href="{% url 'editar_arq' n.id %}">Editar</a></td>
+            <td><a href="{% url 'eliminar_arq' n.id %}">Eliminar</a></td>
+            {% endif %}
           </tr>
 
             {% endfor %}

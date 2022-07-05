@@ -9,18 +9,18 @@
 
 
 
-            <form action="alta_estudios_archviz" method="POST">
+            <form action= "{% url 'editar_archviz' archviz.id %}" method="POST">
 
                 {% csrf_token %}
             
                 <p>Nombre:</p>
-                <input type="text" name="nombre" required>
+                {{mi_formulario.nombre}}
                 <p>Pagina Web:</p>
-                <input type="url" name="pagina_web" required>
+                {{mi_formulario.pagina_web}}
                 <p>Email:</p>
-                <input type="email" name="email" required>
+                {{mi_formulario.email}}
                 <p>Opinion:</p>
-                <input type="text" name="opinion" required>
+                {{mi_formulario.opinion}}
             
             
                 <input type="submit" value="Enviar">

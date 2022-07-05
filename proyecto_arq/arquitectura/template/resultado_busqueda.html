@@ -1,4 +1,10 @@
+{% extends "index.html" %}
 
+
+{% load static %}
+
+
+{% block contenido %}
 
     <form action="buscar_info"></form>
 
@@ -7,7 +13,7 @@
     <ul>
         {% for n in estudios %}
             <li>{{n.nombre}}</li>
-            <li>{{n.nombre}}</li>
+
             {% endfor %}
     </ul>
 
@@ -18,3 +24,4 @@
 
     <a class="btn-primary" href="{% url 'index' %}">Volver</a>
 
+    {% endblock %}

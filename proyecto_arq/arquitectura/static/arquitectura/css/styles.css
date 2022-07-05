@@ -3556,7 +3556,7 @@ textarea.form-control-lg {
 .dropdown-menu {
   position: absolute;
   z-index: 1000;
-  display: none;
+  display: inline-block;
   min-width: 10rem;
   padding: 0.5rem 0;
   margin: 0;
@@ -3760,7 +3760,7 @@ textarea.form-control-lg {
 }
 
 .dropdown-item {
-  display: block;
+  display: inline-block;
   width: 100%;
   padding: 0.25rem 1rem;
   clear: both;
@@ -3788,7 +3788,7 @@ textarea.form-control-lg {
 }
 
 .dropdown-menu.show {
-  display: block;
+  display: inline-block;
 }
 
 .dropdown-header {
@@ -3801,7 +3801,7 @@ textarea.form-control-lg {
 }
 
 .dropdown-item-text {
-  display: block;
+  display: inline-block;
   padding: 0.25rem 1rem;
   color: #212529;
 }
@@ -3885,6 +3885,30 @@ textarea.form-control-lg {
   border-top-left-radius: 0;
   border-bottom-left-radius: 0;
 }
+
+#cta {
+  font-family: 'Open Sans', sans-serif;
+  background-color: whitesmoke;
+  width: 50%;
+  margin: 0 auto;
+  margin-top: 50px;
+  vertical-align: middle;
+  text-align: center;
+
+}
+
+.dropdown{
+  display: inline-block;
+}
+
+
+img {
+
+width: 50px;
+height: auto;
+
+}
+
 
 .dropdown-toggle-split {
   padding-right: 0.75rem;

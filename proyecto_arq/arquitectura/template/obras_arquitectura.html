@@ -15,6 +15,7 @@
             <th scope="col">Arquitecto</th>
             <th scope="col">Fecha de construccion</th>
             <th scope="col">Ubicacion</th>
+            <th scope="col">Opinion</th>
           </tr>
         </thead>
         <tbody>
@@ -25,6 +26,11 @@
             <td>{{n.arquitecto}}</td>
             <td>{{n.año_construccion}}</td>
             <td>{{n.ubicacion}}</td>
+            <td>{{n.opinion}}</td>
+            {% if request.user.is_authenticated %}
+            <td><a href="{% url 'editar_obras' n.id %}">Editar</a></td>
+            <td><a href="{% url 'eliminar_obras' n.id %}">Eliminar</a></td>
+            {% endif %}
           </tr>
 
             {% endfor %}

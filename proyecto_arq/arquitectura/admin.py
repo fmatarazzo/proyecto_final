@@ -7,3 +7,4 @@ from .models import *
 admin.site.register(Estudios)
 admin.site.register(Obras)
 admin.site.register(Archviz)
+admin.site.register(Avatar)

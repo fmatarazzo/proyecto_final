@@ -9,20 +9,20 @@
 
 
 
-            <form action="alta_obras_arq" method="POST">
+            <form action="{% url 'editar_obras' obras.id %}" method="POST">
 
                 {% csrf_token %}
             
                 <p>Nombre de la obra:</p>
-                <input type="text" name="nombre_obra" required>
+                {{mi_formulario.nombre_obra}}
                 <p>Arquitecto:</p>
-                <input type="text" name="arquitecto" required>
+                {{mi_formulario.arquitecto}}
                 <p>Fecha construccion:</p>
-                <input type="text" name="año_construccion" required>
+                {{mi_formulario.año_construccion}}
                 <p>Ubicacion:</p>
-                <input type="text" name="ubicacion" required>
+                {{mi_formulario.ubicacion}}
                 <p>Opinion:</p>
-                <input type="text" name="opinion" required>
+                {{mi_formulario.opinion}}
             
             
                 <input type="submit" value="Enviar">
