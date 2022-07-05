@@ -1,20 +1,11 @@
 # proyecto_final
 
-Hice todo en una sola app, llamada arquitectura.
+Hola!
+Mi nombre es Félix Matarazzo
 
-Puse 5 elementos=
+Esta es una página tipo blog sobre opiniones de estudios de arquitectura, obras y estudios de visualización arquitectónica (arquitectura en 3D).
+Hice una división de sectores como para poder diferenciar los distintos tipos de información, y la separé para que solamente el administrador pueda manipular la informacíon. El resto solo puede ver lo publicado.
 
--ESTUDIOS ARQUITECTURA
-  Tiene un dropdown menu donde se puede ver una lista de estudios y agregar nuevos a esa lista
-  
--OBRAS ARQUITECTURA
-  Tiene un dropdown menu donde se puede ver una lista de obras de arquitectura y agregar nuevas a esa lista
-  
--ESTUDIOS ARCHVIZ
-  Tiene un dropdown menu donde se puede ver una lista de estudios que se dedicana hacer arquitectura en 3D (renders) y agregar nuevos a esa lista
+La idea es que los usuarios se registren para poder opinar sobre distintos estudios/obras y que las personas puedan tener una referencia a la hora de buscar información y la calidad de la misma.
 
--SIGN UP
-  Un signup a un newsletter
-
--BUSCAR
-  Un formulario de busqueda
+Aca dejo un link con el uso de la página: https://drive.google.com/file/d/12LTHskPcIDUkaxwJrochmbL9JWI4RfnG/view?usp=sharing
